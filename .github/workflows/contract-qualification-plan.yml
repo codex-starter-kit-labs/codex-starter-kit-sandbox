@@ -27,7 +27,7 @@ jobs:
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
         with:
           repository: dragondad22/codex-starter-kit
-          ref: 4985e4cf5e373b775fe7fdbd6f527f08b8810e60
+          ref: 531c418b5c9b23e43d7649b4ba8ec0f535faab0e
           path: tool
 
       - name: Install pinned Go
@@ -42,7 +42,7 @@ jobs:
           --stage qualification
           --role "${{ matrix.role }}"
           --repository "${{ github.workspace }}"
-          --source-revision 4985e4cf5e373b775fe7fdbd6f527f08b8810e60
+          --source-revision 531c418b5c9b23e43d7649b4ba8ec0f535faab0e
           --success-head 6988ecc5d9a339051b3d7a44c4738a440912c61e
           --failing-head 3f62b849dc1a5244755230b4e206a79dd8751fda
           > "${{ matrix.role }}-input.json"
