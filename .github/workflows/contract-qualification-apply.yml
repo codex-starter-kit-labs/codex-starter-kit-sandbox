@@ -10,6 +10,7 @@ concurrency:
 jobs:
   seeder:
     uses: ./.github/workflows/contract-apply-role.yml
+    secrets: inherit
     with:
       stage: qualification
       role: seeder
@@ -23,6 +24,7 @@ jobs:
   reviewer:
     needs: seeder
     uses: ./.github/workflows/contract-apply-role.yml
+    secrets: inherit
     with:
       stage: qualification
       role: reviewer
@@ -38,6 +40,7 @@ jobs:
   rules:
     needs: reviewer
     uses: ./.github/workflows/contract-apply-role.yml
+    secrets: inherit
     with:
       stage: qualification
       role: rules
