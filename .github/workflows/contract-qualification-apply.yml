@@ -18,12 +18,12 @@ jobs:
     with:
       stage: qualification
       role: seeder
-      plan_id: sha256:d4366d1f94197119570e9c78ae376fa737dcbcbb42c237a2cad5e2fe073e79f4
-      planning_run_id: "29603542576"
+      plan_id: sha256:848a43c5a2ce2f90708c7822d9b6765aa068d49a86fef2ba047f3b10012d752c
+      planning_run_id: "29609916950"
       artifact_name: issue-73-qualification-seeder-planning
-      source_revision: 526a154377bcb0e7320b6e4a7134f82aa6de71af
-      approval_id: issue-comment-5007006349
-      approved_at: "2026-07-17T19:58:59Z"
+      source_revision: e1c1178b2323cdb3eba60ad649dc9767582d965e
+      approval_id: issue-comment-5007085280
+      approved_at: "2026-07-17T20:10:14Z"
 
   reviewer:
     needs: seeder
@@ -32,12 +32,12 @@ jobs:
     with:
       stage: qualification
       role: reviewer
-      plan_id: sha256:44d7b5c88bd504910bc0eaa50c0d82560d40dc5f12f779d9a932882992c138ab
-      planning_run_id: "29603542576"
+      plan_id: sha256:cd2f003cbd06e78453023b398cdb89b52afd71c56c2de695c5680a2c00c957c0
+      planning_run_id: "29609916950"
       artifact_name: issue-73-qualification-reviewer-planning
-      source_revision: 526a154377bcb0e7320b6e4a7134f82aa6de71af
-      approval_id: issue-comment-5007006349
-      approved_at: "2026-07-17T19:58:59Z"
+      source_revision: e1c1178b2323cdb3eba60ad649dc9767582d965e
+      approval_id: issue-comment-5007085280
+      approved_at: "2026-07-17T20:10:14Z"
       success_head: 6988ecc5d9a339051b3d7a44c4738a440912c61e
       failing_head: 3f62b849dc1a5244755230b4e206a79dd8751fda
 
@@ -48,9 +48,9 @@ jobs:
     with:
       stage: qualification
       role: rules
-      plan_id: sha256:bb666eda65b1abeb50fef86b18cdf3b5371ed868c21b5380fa8fd81f1ea9b330
-      planning_run_id: "29603542576"
+      plan_id: sha256:bb2dd1ce44b3c13f388cb8e6f6194b3d81981d398c4c6b3ed26563d2073c7077
+      planning_run_id: "29609916950"
       artifact_name: issue-73-qualification-rules-planning
-      source_revision: 526a154377bcb0e7320b6e4a7134f82aa6de71af
-      approval_id: issue-comment-5007006349
-      approved_at: "2026-07-17T19:58:59Z"
+      source_revision: e1c1178b2323cdb3eba60ad649dc9767582d965e
+      approval_id: issue-comment-5007085280
+      approved_at: "2026-07-17T20:10:14Z"
