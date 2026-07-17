@@ -3,6 +3,10 @@ name: Apply approved contract qualification
 on:
   workflow_dispatch:
 
+permissions:
+  actions: read
+  contents: read
+
 concurrency:
   group: starter-kit-contract-sandbox
   cancel-in-progress: false
