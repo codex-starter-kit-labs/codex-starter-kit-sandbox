@@ -39,6 +39,11 @@ on:
         required: false
         type: string
         default: ""
+    secrets:
+      CSK_APP_PRIVATE_KEY:
+        required: false
+      CSK_REVIEWER_TOKEN:
+        required: false
 
 permissions:
   actions: read
