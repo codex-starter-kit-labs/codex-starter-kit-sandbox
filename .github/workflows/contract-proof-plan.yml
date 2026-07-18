@@ -31,7 +31,7 @@ jobs:
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
         with:
           repository: dragondad22/codex-starter-kit
-          ref: 4163e8ad03d69253f064e964d422ea69bedf35b2
+          ref: 2d916a8870faa8a1cee31b1a7761fed74a9efd10
           path: tool
 
       - name: Install pinned Go
@@ -46,7 +46,7 @@ jobs:
           --stage "${{ matrix.stage }}"
           --role "${{ matrix.role }}"
           --repository "${{ github.workspace }}"
-          --source-revision 4163e8ad03d69253f064e964d422ea69bedf35b2
+          --source-revision 2d916a8870faa8a1cee31b1a7761fed74a9efd10
           > "${{ matrix.role }}-input.json"
 
       - name: Inspect and emit immutable proof plan
