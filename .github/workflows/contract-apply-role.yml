@@ -9,9 +9,6 @@ on:
       role:
         required: true
         type: string
-      plan_id:
-        required: true
-        type: string
       planning_run_id:
         required: true
         type: string
@@ -19,12 +16,6 @@ on:
         required: true
         type: string
       source_revision:
-        required: true
-        type: string
-      approval_id:
-        required: true
-        type: string
-      approved_at:
         required: true
         type: string
       success_head:
@@ -91,32 +82,23 @@ jobs:
           --failing-head "${{ inputs.failing_head }}"
           > "${{ inputs.role }}-input.json"
 
-      - name: Bind exact plan to recorded approval
-        env:
-          APPROVED_PLAN_ID: ${{ inputs.plan_id }}
+      - name: Bind exact plan to approved execution mandate
         run: |
           jq -n \
             --slurpfile generated "${{ inputs.role }}-input.json" \
             --slurpfile planning "plan/${{ inputs.role }}-planning.json" \
-            --arg plan_id "$APPROVED_PLAN_ID" \
-            --arg approval_id "${{ inputs.approval_id }}" \
-            --arg approved_at "${{ inputs.approved_at }}" \
             '{
               role: $generated[0].role,
               manifest: $generated[0].request.manifest,
               plan: $planning[0].plan,
               approval: {
-                schema_version: 1,
-                plan_id: $plan_id,
-                approved_by: "dragondad22",
-                approval_id: $approval_id,
-                approved_at: $approved_at
+                schema_version: 2,
+                mandate: $generated[0].mandate
               },
               config: $generated[0].config,
               app: $generated[0].app,
               reviewer: $generated[0].reviewer
-            }
-            | if .plan.plan_id == $plan_id then . else error("downloaded plan does not match approval") end' \
+            }' \
             > "${{ inputs.role }}-apply.json"
 
       - name: Apply and verify approved role plan
