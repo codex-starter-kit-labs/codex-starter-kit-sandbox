@@ -18,7 +18,7 @@ jobs:
     with:
       stage: cleanup
       role: rules
-      planning_run_id: "PENDING"
+      planning_run_id: "29625680911"
       artifact_name: issue-73-cleanup-rules-planning
       source_revision: 4163e8ad03d69253f064e964d422ea69bedf35b2
 
@@ -29,6 +29,6 @@ jobs:
     with:
       stage: cleanup
       role: seeder
-      planning_run_id: "PENDING"
+      planning_run_id: "29625680911"
       artifact_name: issue-73-cleanup-seeder-planning
       source_revision: 4163e8ad03d69253f064e964d422ea69bedf35b2
