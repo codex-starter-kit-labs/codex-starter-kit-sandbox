@@ -18,6 +18,6 @@ jobs:
     with:
       stage: rules-proof
       role: seeder
-      planning_run_id: "29625297551"
+      planning_run_id: "29625410526"
       artifact_name: issue-73-rules-proof-seeder-planning
-      source_revision: 3600f8e3f42273f8ec6875d91980110ec1ca3bfd
+      source_revision: 9ffd9f765bfef49b3c6ff9fcd7a28e63449302d5
