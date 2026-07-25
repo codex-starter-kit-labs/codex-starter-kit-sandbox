@@ -6,4 +6,4 @@ jobs:
   contract-delivery:
     runs-on: ubuntu-latest
     steps:
-      - run: echo initial-head
+      - run: echo candidate-head
