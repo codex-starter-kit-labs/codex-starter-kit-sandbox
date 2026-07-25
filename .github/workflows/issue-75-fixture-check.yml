@@ -1,9 +1,0 @@
-# starter-kit-contract:issue-75-20260721-01
-name: Issue 75 contract
-on:
-  pull_request:
-jobs:
-  contract-delivery:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo stale-head-qualified
